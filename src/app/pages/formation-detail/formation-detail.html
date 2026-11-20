@@ -1,0 +1,16 @@
+<a routerLink="/" class="retour">← Retour au catalogue</a>
+@if (formation(); as f) {
+  <article class="detail">
+    <h2>{{ f.titre }}</h2>
+    <p>{{ f.resume }}</p>
+    <ul>
+      <li>Durée : {{ f.dureeHeures }} heures</li>
+      <li>Niveau : {{ f.niveau }}</li>
+      <li>Modalité : {{ f.modalite }}</li>
+      <li>Prix : {{ f.prix | currency:'EUR' }} HT</li>
+      <li>Places restantes : {{ f.placesRestantes }}</li>
+    </ul>
+  </article>
+} @else {
+  <p>Cette formation n'existe pas.</p>
+}

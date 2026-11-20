@@ -1,0 +1,17 @@
+<article class="carte" [class.complet]="complet()">
+  <span class="niveau">{{ formation().niveau }}</span>
+  <h2>{{ formation().titre }}</h2>
+  <p>{{ formation().resume }}</p>
+
+  <!-- ATELIER 2 : affichez aussi la durée, par exemple : {{ formation().dureeHeures }} h -->
+  <p class="infos">{{ formation().modalite }}</p>
+
+  <!-- ATELIER 3 : affichez le prix avec le « pipe » currency : {{ formation().prix | currency:'EUR' }} -->
+
+  @if (complet()) {
+    <p class="alerte">Session complète</p>
+  } @else {
+    <p class="places">{{ formation().placesRestantes }} place(s) restante(s)</p>
+  }
+  <a [routerLink]="['/formation', formation().id]" class="bouton">Voir le détail</a>
+</article>

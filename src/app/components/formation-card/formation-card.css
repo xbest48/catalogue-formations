@@ -1,0 +1,10 @@
+.carte { background: #fff; border: 1px solid #e3e3ea; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 6px; height: 100%; box-sizing: border-box; }
+.carte.complet { opacity: .7; }
+.niveau { align-self: flex-start; background: #ECEAF7; color: #3E348C; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; }
+h2 { font-size: 18px; margin: 6px 0 0; color: #3E348C; }
+p { margin: 0; line-height: 1.45; }
+.infos { color: #8A8B8F; font-size: 14px; }
+.places { color: #2e7d32; font-size: 14px; font-weight: 600; }
+.alerte { color: #c0392b; font-size: 14px; font-weight: 700; }
+.bouton { margin-top: auto; align-self: flex-start; background: #FFD129; color: #2b2b2b; padding: 8px 14px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+.prix { font-weight: 700; color: #3E348C; }

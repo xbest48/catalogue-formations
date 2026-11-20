@@ -1,0 +1,21 @@
+<section class="outils">
+  <label>
+    Niveau :
+    <select (change)="choisir($any($event.target).value)">
+      <option>Tous</option>
+      @for (n of niveaux; track n) {
+        <option>{{ n }}</option>
+      }
+    </select>
+  </label>
+  <!-- ATELIER 4 : modifiez la phrase ci-dessous (texte, ordre des mots). -->
+  <p>{{ formations().length }} formation(s) affichée(s)</p>
+</section>
+
+<section class="grille">
+  @for (f of formations(); track f.id) {
+    <app-formation-card [formation]="f" />
+  } @empty {
+    <p>Aucune formation pour ce niveau.</p>
+  }
+</section>
